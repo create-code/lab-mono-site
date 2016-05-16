@@ -26,7 +26,7 @@ class pastebinFetcher {
 	}
 
 	private function getDevKey() {
-		if( $key = file_get_contents( 'pastebin_dev_key' ) ) {
+		if( $key = file_get_contents( '.pastebin_dev_key' ) ) {
 			$this->settings['api']['data']['api_dev_key'] = $key;
 			return $this->settings['api']['data']['api_dev_key'];
 		} else {
