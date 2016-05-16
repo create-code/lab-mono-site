@@ -1,0 +1,109 @@
+var Pastes = ( function() {
+	var settings = {
+		selector: {
+			pastes: 	'.pastes',
+			paste:  	'.paste',
+			scroller:  	'.paste-scroller'
+		},
+		scrollers: [],
+		scrollStepMin: 0.5,
+		scrollStepMax: 2,
+		isScrolling: false
+	}
+
+	var init = function() {
+		Debug.log( 'pastes.init()' );
+
+		bindEventHandlers();
+		loadData();
+	}
+
+	var bindEventHandlers = function() {
+		Debug.log( 'pastes.bindEventHandlers()' );
+
+		$( document )
+			.on( 'pastes/data/loaded', function() {
+				build();
+				setScroller();
+			} )
+			.on( 'viewport/loop', function() {
+				onLoop();
+			} )
+			.on( 'viewport/resize/finish', function() {
+				onResize();
+			} );
+	}
+
+	var onLoop = function() {		
+		scroll();
+	}
+
+	var onResize = function() {		
+		setScroller();
+	}	
+
+	var loadData = function( callback ) {
+		Debug.log( 'pastes.loadData()' );
+
+		$.getJSON( 'pastebinFetcher.php', function( data ) {
+			settings.data = data;
+
+			$( document ).trigger( 'pastes/data/loaded' );
+		} );		
+	}
+
+	var build = function() {
+		Debug.log( 'pastes.build()' );
+
+		var pastes = $( settings.selector.pastes );
+		for( var i = 0; i < settings.data.length; i++ ) {
+			var text = settings.data[i]['paste_content'];
+			text = text.replace( /&amp;/gi, '&' );
+			var paste = $( '<article class="paste" data-url="' + encodeURI( settings.data[i]['paste_url'] ) + '"><div class="paste-scroller"><a href="' + encodeURI( settings.data[i]['paste_url'] ) + '" target="_blank">' + text + '</a></div></article>' );
+
+			paste
+				.appendTo( pastes );
+		}
+
+		$( document ).trigger( 'pastes/built' );		
+	}
+
+	var setScroller = function() {
+		settings.isScrolling = true;
+		settings.scrollers = [];
+
+		var $scrollers = $( settings.selector.scroller );
+
+		$scrollers.each( function() {
+			var $scroller = $( this );
+			var scroller = {};
+
+			scroller.element = $scroller;
+			scroller.scrollWidth = $scroller[0].scrollWidth;
+			scroller.scrollLeft = 0;
+			scroller.scrollStep = settings.scrollStepMin + ( settings.scrollStepMin + ( ( settings.scrollStepMax - settings.scrollStepMin ) * Math.random() ) );
+
+			settings.scrollers.push( scroller );
+		} );
+
+		Debug.log( settings );
+	}
+
+	var scroll = function() {
+		if( settings.isScrolling ) {
+			for( var i = 0; i < settings.scrollers.length; i++ ) {
+				settings.scrollers[i].scrollLeft = ( settings.scrollers[i].scrollLeft < settings.scrollers[i].scrollWidth - viewport.getWidth() ) ? settings.scrollers[i].element.scrollLeft() + settings.scrollers[i].scrollStep : 0;
+				settings.scrollers[i].element.scrollLeft( settings.scrollers[i].scrollLeft );			
+			}
+		}
+	}
+
+	return {
+		init: function() { init(); }
+	}
+} )();
+
+
+$( document ).ready( function() {
+	Pastes.init();
+} );

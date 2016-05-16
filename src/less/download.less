@@ -1,0 +1,30 @@
+.download {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	z-index: 400;
+
+	box-sizing: border-box;
+	height: ( 100vh / 8 * 3 );
+	padding: 0.5em 0.75em;
+
+	font-size: 6.75vh;
+	color: @color--text;
+	text-decoration: none;
+
+	background: @color--1;
+
+	&:hover,
+	&:focus {
+		background: @color--2;
+	}
+}
+
+.download-line {
+	display: block;
+	
+	&:first-child {
+		margin-bottom: ( 100vh / 8 );
+		padding-bottom: 0.75em;
+	}
+}

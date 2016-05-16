@@ -1,0 +1,16 @@
+{
+	"name":			"LabMonoSite",
+	"version":		"0.0.1",
+	"author":		"Martin Wecke",
+	"private":		true,
+
+	"devDependencies": {
+		"grunt":					"*",
+		"grunt-contrib-watch":		"*",
+		"grunt-contrib-less":		"*",
+		"grunt-autoprefixer":		"*",
+		"grunt-modernizr":			"*",
+		"grunt-contrib-uglify":		"*",
+		"matchdep":					"*"
+	} 
+}
