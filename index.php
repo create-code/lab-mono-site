@@ -5,6 +5,7 @@
 
 		<meta charset="utf-8">
 
+		<link rel="stylesheet" type="text/css" href="dist/font/lab-mono.css">
 		<link rel="stylesheet" type="text/css" href="dist/css/style.css">
 
 		<script src="src/js/jquery.min.js"></script>
