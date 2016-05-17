@@ -5,18 +5,30 @@
 	z-index: 400;
 
 	box-sizing: border-box;
-	height: ( 100vh / 8 * 3 );
-	padding: 0.5em 0.75em;
+	width: ( 100vh / 8 );
+	height: ( 100vh / 8 );
+	margin: 0 0 ( 100vh / 8 ) 0;
+	padding: 0.5em 0.5em;
 
 	font-size: 6.75vh;
 	color: @color--text;
 	text-decoration: none;
+	text-align: center;
 
 	background: @color--1;
 
+	& > .reveal {
+		display: none;
+	}
+
 	&:hover,
 	&:focus {
+		width: auto;
 		background: @color--2;
+
+		& > .reveal {
+			display: inline;
+		}		
 	}
 }
 

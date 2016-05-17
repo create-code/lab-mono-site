@@ -7,7 +7,8 @@
 	box-sizing: border-box;
 	width: ( 100vh / 8 );
 	height: ( 100vh / 8 );
-	padding: 0.5em 0;
+	margin: ( 100vh / 8 * 2 ) 0 0 0;
+	padding: 0.5em 0.5em;
 
 	font-size: 6.75vh;
 	color: #111;
@@ -16,9 +17,18 @@
 
 	background: #6000E4;
 
+	& > .reveal {
+		display: none;
+	}
+
 	&:hover,
 	&:focus {
+		width: auto;
 		background: @color--2;
+
+		& > .reveal {
+			display: inline;
+		}		
 	}
 }
 

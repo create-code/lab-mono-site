@@ -11,6 +11,26 @@ html {
           font-feature-settings: 'liga';
   color: #111;
 }
+h1 {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 400;
+  box-sizing: border-box;
+  height: 12.5vh;
+  margin: 0;
+  padding: 0.5em 0.5em;
+  font-size: 6.75vh;
+  font-weight: 400;
+  color: #111;
+  text-align: center;
+  background: #5C14DD;
+}
+h1:hover,
+h1:focus {
+  width: auto;
+  background: #9EFF08;
+}
 .preloader {
   position: fixed;
   left: 0;
@@ -63,17 +83,23 @@ html {
 }
 .paste::after {
   content: attr(data-url);
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
-  z-index: 10;
-  padding: 0.5em 0.5em 0.25em;
-  font-size: 0.75rem;
+  z-index: 100;
+  box-sizing: border-box;
+  width: 100vh;
+  padding: 0.5em 0.5em;
+  font-size: 7.5vh;
   line-height: 1;
   white-space: nowrap;
   color: #fff;
   background: #5C14DD;
   visibility: hidden;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotate(-90deg) translateX(-100%);
+          transform: rotate(-90deg) translateX(-100%);
 }
 .paste:nth-child( 2n + 1 ) {
   color: #fff;
@@ -109,16 +135,27 @@ html {
   bottom: 0;
   z-index: 400;
   box-sizing: border-box;
-  height: 37.5vh;
-  padding: 0.5em 0.75em;
+  width: 12.5vh;
+  height: 12.5vh;
+  margin: 0 0 12.5vh 0;
+  padding: 0.5em 0.5em;
   font-size: 6.75vh;
   color: #111;
   text-decoration: none;
+  text-align: center;
   background: #5C14DD;
+}
+.download > .reveal {
+  display: none;
 }
 .download:hover,
 .download:focus {
+  width: auto;
   background: #9EFF08;
+}
+.download:hover > .reveal,
+.download:focus > .reveal {
+  display: inline;
 }
 .download-line {
   display: block;
@@ -135,16 +172,25 @@ html {
   box-sizing: border-box;
   width: 12.5vh;
   height: 12.5vh;
-  padding: 0.5em 0;
+  margin: 25vh 0 0 0;
+  padding: 0.5em 0.5em;
   font-size: 6.75vh;
   color: #111;
   text-align: center;
   text-decoration: none;
   background: #6000E4;
 }
+.info-toggle > .reveal {
+  display: none;
+}
 .info-toggle:hover,
 .info-toggle:focus {
+  width: auto;
   background: #9EFF08;
+}
+.info-toggle:hover > .reveal,
+.info-toggle:focus > .reveal {
+  display: inline;
 }
 .info-content {
   position: fixed;
@@ -194,17 +240,25 @@ html {
   box-sizing: border-box;
   width: 12.5vh;
   height: 12.5vh;
-  margin: 12.5vh 0 0 0;
-  padding: 0.5em 0;
+  margin: 50vh 0 0 0;
+  padding: 0.5em 0.5em;
   font-size: 6.75vh;
   color: #111;
   text-align: center;
   text-decoration: none;
   background: #6000E4;
 }
+.bookmarklet-toggle > .reveal {
+  display: none;
+}
 .bookmarklet-toggle:hover,
 .bookmarklet-toggle:focus {
+  width: auto;
   background: #9EFF08;
+}
+.bookmarklet-toggle:hover > .reveal,
+.bookmarklet-toggle:focus > .reveal {
+  display: inline;
 }
 .bookmarklet-content {
   position: fixed;

@@ -15,18 +15,17 @@
 		<script src="src/js/pastes.js"></script>
 	</head>
 	<body>
+		<h1>
+			Lab Mono
+		</h1>
+
 		<a href="https://github.com/hatsumatsu/Lab-Mono/archive/master.zip" class="download" title="Download from github.com">
-			<span class="download-line">
-				Lab Mono
-			</span>
-			<span class="download-line">			
-				Download
-			</span>
+			&rarr;<span class="reveal"> download</span>
 		</a>		
 
 		<section class="info" id="info">
 			<a href="#info" class="info-toggle" title="Info">
-				i
+				i<span class="reveal">nfo</span>
 			</a>
 
 			<div class="info-content">
@@ -46,12 +45,12 @@ The sample texts on this website are automatically fetched from <a href="http://
 
 		<section class="bookmarklet" id="bookmarklet">
 			<a href="#bookmarklet" class="bookmarklet-toggle" title="Bookmarklet">
-				b
+				b<span class="reveal">ookmarklet</span>
 			</a>
 
 			<div class="bookmarklet-content">
 				<p>
-Test Lab Mono on any website: Simply drag this button to your browser’s bookmark toolbar and hit it on any website.
+Test Lab Mono on any website: Simply drag this button to your browser’s bookmark toolbar and hit the button.
 				</p>
 
 				<p>

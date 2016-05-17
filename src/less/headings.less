@@ -1,0 +1,24 @@
+h1 {
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 400;
+
+	box-sizing: border-box;
+	height: ( 100vh / 8 );
+	margin: 0;
+	padding: 0.5em 0.5em;
+
+	font-size: 6.75vh;
+	font-weight: 400;
+	color: @color--text;
+	text-align: center;
+
+	background: @color--1;
+
+	&:hover,
+	&:focus {
+		width: auto;
+		background: @color--2;	
+	}
+}
