@@ -186,3 +186,63 @@ html {
 .info-content .button:focus {
   color: #9EFF08;
 }
+.bookmarklet-toggle {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 400;
+  box-sizing: border-box;
+  width: 12.5vh;
+  height: 12.5vh;
+  margin: 12.5vh 0 0 0;
+  padding: 0.5em 0;
+  font-size: 6.75vh;
+  color: #111;
+  text-align: center;
+  text-decoration: none;
+  background: #6000E4;
+}
+.bookmarklet-toggle:hover,
+.bookmarklet-toggle:focus {
+  background: #9EFF08;
+}
+.bookmarklet-content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1000;
+  padding: 0.5em 0.75em;
+  font-size: 6.75vh;
+  line-height: 1.5;
+  background: #5C14DD;
+  overflow-x: hidden;
+  overflow-y: auto;
+  opacity: 0;
+}
+.bookmarklet:target .bookmarklet-content {
+  z-index: 1000;
+  opacity: 1;
+}
+.bookmarklet-content > p {
+  margin: 0 0 1.5em 0;
+}
+.bookmarklet-content small {
+  font-size: 0.5em;
+}
+.bookmarklet-content a {
+  color: inherit;
+  text-decoration: underline;
+}
+.bookmarklet-content .button {
+  padding: 0.5em;
+  color: #5C14DD;
+  line-height: 1;
+  text-decoration: none;
+  background: #111;
+}
+.bookmarklet-content .button:hover,
+.bookmarklet-content .button:focus {
+  color: #9EFF08;
+}

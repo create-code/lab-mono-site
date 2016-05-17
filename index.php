@@ -15,7 +15,7 @@
 		<script src="src/js/pastes.js"></script>
 	</head>
 	<body>
-		<a href="https://github.com/hatsumatsu/Lab-Mono/archive/master.zip" class="download">
+		<a href="https://github.com/hatsumatsu/Lab-Mono/archive/master.zip" class="download" title="Download from github.com">
 			<span class="download-line">
 				Lab Mono
 			</span>
@@ -25,17 +25,17 @@
 		</a>		
 
 		<section class="info" id="info">
-			<a href="#info" class="info-toggle">
+			<a href="#info" class="info-toggle" title="Info">
 				i
 			</a>
 
 			<div class="info-content">
 				<p>
-	Lab&nbsp;Mono is a typeface designed by <a href="http://martinwecke.de">Martin&nbsp;Wecke</a>.
+Lab&nbsp;Mono is a typeface designed by <a href="http://martinwecke.de">Martin&nbsp;Wecke</a>.
 				</p>
 
 				<p>
-	The sample texts on this website are automatically fetched from <a href="http://pastebin.com">pastebin.com</a>. The site owner is not responsible for these externally created contents.
+The sample texts on this website are automatically fetched from <a href="http://pastebin.com">pastebin.com</a>. The site owner is not responsible for these externally created contents.
 				</p>
 
 				<p>
@@ -43,6 +43,23 @@
 				</p>
 			</div>
 		</section>
+
+		<section class="bookmarklet" id="bookmarklet">
+			<a href="#bookmarklet" class="bookmarklet-toggle" title="Bookmarklet">
+				b
+			</a>
+
+			<div class="bookmarklet-content">
+				<p>
+Test Lab Mono on any website: Simply drag this button to your browser’s bookmark toolbar and hit it on any website.
+				</p>
+
+				<p>
+					<a href="javascript:(function(){s=document.createElement('script');s.type='text/javascript';s.src='https://hatsumatsu.de/lab-mono/bookmarklet/bookmarklet.js';document.body.appendChild(s);})();" class="button" title="Lab Mono">drag me...</a>
+					<a href="#_" class="button">okay</a>
+				</p>
+			</div>
+		</section>		
 
 		<section class="pastes">
 		</section>

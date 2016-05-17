@@ -15,7 +15,7 @@ class pastebinFetcher {
 		'max_length' 	=> 1200,
 		'cache' 		=> array(
 			'filename' 		=> 'cache.json',
-			'lifetime' 		=> 2 * 60 * 60
+			'lifetime' 		=> 7200
 		)
 	);
 
@@ -26,7 +26,7 @@ class pastebinFetcher {
 	}
 
 	private function getDevKey() {
-		if( $key = file_get_contents( '.pastebin_dev_key' ) ) {
+		if( $key = file_get_contents( 'pastebin_dev_key' ) ) {
 			$this->settings['api']['data']['api_dev_key'] = $key;
 			return $this->settings['api']['data']['api_dev_key'];
 		} else {
