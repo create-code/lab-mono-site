@@ -2,12 +2,30 @@
 <html>
 	<head>
 		<title>Lab Mono</title>
-
 		<meta charset="utf-8">
 
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+
+		<meta name="description" content="Lab Mono is a monospace typeface designed by Martion Wecke.">
+
+		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="dist/font/lab-mono.css">
 		<link rel="stylesheet" type="text/css" href="dist/css/style.css">
 
+		<!-- FACEBOOK meta -->
+		<meta property="og:site_name" content="Lab Mono">
+		<meta property="og:description" content="Lab Mono is a monospace typeface designed by Martion Wecke.">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="dist/img/facebook.png">	
+
+		<!-- TWITTER meta -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:url" content="http://hatsumatsu.de/lab-mono">
+		<meta name="twitter:title" content="Lab Mono">
+		<meta name="twitter:description" content="Lab Mono is a monospace typeface designed by Martion Wecke.">
+		<meta name="twitter:image" content="dist/img/facebook.png">		
+
+		<!-- JS -->
 		<script src="src/js/jquery.min.js"></script>
 		<script src="src/js/debug.js"></script>
 		<script src="src/js/viewport.js"></script>
