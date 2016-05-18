@@ -76,6 +76,8 @@
 	}
 
 	& .button {
+		display: inline-block;
+		margin: 0 0.25em 0.5em 0;		
 		padding: 0.5em;
 
 		color: @color--1; 
@@ -87,8 +89,19 @@
 		&:hover,
 		&:focus {
 			color: @color--text;
-			
+
 			background: @color--2;
 		}
+	}
+}
+
+
+@media screen and ( max-width: 48rem ) {
+	.bookmarklet {
+
+	}
+
+	.bookmarklet-content {
+		font-size: 7.5vw;	
 	}
 }

@@ -76,6 +76,8 @@
 	}
 
 	& .button {
+		display: inline-block;
+		margin: 0 0.25em 0.5em 0;
 		padding: 0.5em;
 
 		color: @color--1; 
@@ -90,5 +92,16 @@
 			
 			background: @color--2;
 		}
+	}
+}
+
+
+@media screen and ( max-width: 48rem ) {
+	.info {
+
+	}
+
+	.info-content {
+		font-size: 7.5vw;	
 	}
 }

@@ -227,6 +227,8 @@ h1:focus {
   text-decoration: underline;
 }
 .info-content .button {
+  display: inline-block;
+  margin: 0 0.25em 0.5em 0;
   padding: 0.5em;
   color: #5C14DD;
   line-height: 1;
@@ -237,6 +239,11 @@ h1:focus {
 .info-content .button:focus {
   color: #111;
   background: #9EFF08;
+}
+@media screen and (max-width: 48rem) {
+  .info-content {
+    font-size: 7.5vw;
+  }
 }
 .bookmarklet-toggle {
   position: fixed;
@@ -298,6 +305,8 @@ h1:focus {
   text-decoration: underline;
 }
 .bookmarklet-content .button {
+  display: inline-block;
+  margin: 0 0.25em 0.5em 0;
   padding: 0.5em;
   color: #5C14DD;
   line-height: 1;
@@ -308,4 +317,9 @@ h1:focus {
 .bookmarklet-content .button:focus {
   color: #111;
   background: #9EFF08;
+}
+@media screen and (max-width: 48rem) {
+  .bookmarklet-content {
+    font-size: 7.5vw;
+  }
 }
