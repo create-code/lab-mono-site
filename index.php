@@ -50,7 +50,7 @@ The sample texts on this website are automatically fetched from <a href="http://
 
 			<div class="bookmarklet-content">
 				<p>
-Test Lab Mono on any website: Simply drag this button to your browser’s bookmark toolbar and hit the button.
+Test Lab Mono on any website: Simply drag this button to your browser’s bookmark toolbar and hit it hard.
 				</p>
 
 				<p>

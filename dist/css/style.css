@@ -24,11 +24,13 @@ h1 {
   font-weight: 400;
   color: #111;
   text-align: center;
+  color: #fff;
   background: #5C14DD;
 }
 h1:hover,
 h1:focus {
   width: auto;
+  color: #111;
   background: #9EFF08;
 }
 .preloader {
@@ -90,7 +92,7 @@ h1:focus {
   box-sizing: border-box;
   width: 100vh;
   padding: 0.5em 0.5em;
-  font-size: 7.5vh;
+  font-size: 5vh;
   line-height: 1;
   white-space: nowrap;
   color: #fff;
@@ -140,9 +142,9 @@ h1:focus {
   margin: 0 0 12.5vh 0;
   padding: 0.5em 0.5em;
   font-size: 6.75vh;
-  color: #111;
   text-decoration: none;
   text-align: center;
+  color: #fff;
   background: #5C14DD;
 }
 .download > .reveal {
@@ -151,6 +153,7 @@ h1:focus {
 .download:hover,
 .download:focus {
   width: auto;
+  color: #111;
   background: #9EFF08;
 }
 .download:hover > .reveal,
@@ -175,10 +178,10 @@ h1:focus {
   margin: 25vh 0 0 0;
   padding: 0.5em 0.5em;
   font-size: 6.75vh;
-  color: #111;
   text-align: center;
   text-decoration: none;
-  background: #6000E4;
+  color: #fff;
+  background: #5C14DD;
 }
 .info-toggle > .reveal {
   display: none;
@@ -186,6 +189,7 @@ h1:focus {
 .info-toggle:hover,
 .info-toggle:focus {
   width: auto;
+  color: #111;
   background: #9EFF08;
 }
 .info-toggle:hover > .reveal,
@@ -202,6 +206,7 @@ h1:focus {
   padding: 0.5em 0.75em;
   font-size: 6.75vh;
   line-height: 1.5;
+  color: #fff;
   background: #5C14DD;
   overflow-x: hidden;
   overflow-y: auto;
@@ -226,11 +231,12 @@ h1:focus {
   color: #5C14DD;
   line-height: 1;
   text-decoration: none;
-  background: #111;
+  background: #fff;
 }
 .info-content .button:hover,
 .info-content .button:focus {
-  color: #9EFF08;
+  color: #111;
+  background: #9EFF08;
 }
 .bookmarklet-toggle {
   position: fixed;
@@ -243,10 +249,10 @@ h1:focus {
   margin: 50vh 0 0 0;
   padding: 0.5em 0.5em;
   font-size: 6.75vh;
-  color: #111;
   text-align: center;
   text-decoration: none;
-  background: #6000E4;
+  color: #fff;
+  background: #5C14DD;
 }
 .bookmarklet-toggle > .reveal {
   display: none;
@@ -254,6 +260,7 @@ h1:focus {
 .bookmarklet-toggle:hover,
 .bookmarklet-toggle:focus {
   width: auto;
+  color: #111;
   background: #9EFF08;
 }
 .bookmarklet-toggle:hover > .reveal,
@@ -270,6 +277,7 @@ h1:focus {
   padding: 0.5em 0.75em;
   font-size: 6.75vh;
   line-height: 1.5;
+  color: #fff;
   background: #5C14DD;
   overflow-x: hidden;
   overflow-y: auto;
@@ -294,9 +302,10 @@ h1:focus {
   color: #5C14DD;
   line-height: 1;
   text-decoration: none;
-  background: #111;
+  background: #fff;
 }
 .bookmarklet-content .button:hover,
 .bookmarklet-content .button:focus {
-  color: #9EFF08;
+  color: #111;
+  background: #9EFF08;
 }

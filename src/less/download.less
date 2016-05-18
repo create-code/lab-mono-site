@@ -11,9 +11,9 @@
 	padding: 0.5em 0.5em;
 
 	font-size: 6.75vh;
-	color: @color--text;
 	text-decoration: none;
 	text-align: center;
+	color: @color--bg;
 
 	background: @color--1;
 
@@ -24,6 +24,9 @@
 	&:hover,
 	&:focus {
 		width: auto;
+
+		color: @color--text;
+
 		background: @color--2;
 
 		& > .reveal {
