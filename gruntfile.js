@@ -1,6 +1,7 @@
 module.exports = function( grunt ) {
 
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
+	require( './.deployment' );
 
 	grunt.initConfig( {
 		pkg: grunt.file.readJSON( 'package.json' ),
@@ -62,15 +63,27 @@ module.exports = function( grunt ) {
 			}
 		},
 
+		copy: {
+			production: {
+				files: [
+					{
+						expand: true, 
+						src: ['src/**/*', 'dist/**/*', '*.php', 'pastebin_dev_key', '!.*'], 
+						dest: dest + '/'
+					},
+		    	],
+		  	},
+		},
+
 		watch: {
 			css: {
 				files: ['**/*.less'],
 				tasks: ['buildcss']
 			},
 			js: {
-				files: ['src/js/**/*.js','!js/**/*.min.js'],
+				files: ['src/js/**/*.js','!js/**/*.min.js', '!pastebin_dev_key', '*.sublime-*'],
 				tasks: ['buildjs']
-			}
+			} 
 		}
 
 	} );
@@ -80,6 +93,8 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'buildcss',  ['less', 'autoprefixer'] );
 	grunt.registerTask( 'buildmodernizr', ['modernizr'] );
 	grunt.registerTask( 'buildjs',  ['uglify'] );
+
+	grunt.registerTask( 'deploy_production', ['copy:production'] );	
 
 	grunt.registerTask( 'build',  ['buildcss', 'buildmodernizr', 'buildjs'] );
 };

@@ -53,7 +53,7 @@ Lab&nbsp;Mono is a typeface designed by <a href="http://martinwecke.de">Martin&n
 				</p>
 
 				<p>
-The sample texts on this website are automatically fetched from <a href="http://pastebin.com">pastebin.com</a>. The site owner is not responsible for these externally created contents.
+The sample texts on this website are automatically fetched from <a href="http://pastebin.com">pastebin.com</a>. The site’s author is not responsible for these externally created contents.
 				</p>
 
 				<p>

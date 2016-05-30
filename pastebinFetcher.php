@@ -93,8 +93,8 @@ class pastebinFetcher {
 	}
 
 	private function santizeText( $text ) {
-		// limit length
-		$text = mb_substr( htmlentities( $text ), 0, $this->settings['max_length'] );
+		// limit length roughly
+		$text = mb_substr( $text, 0, ( $this->settings['max_length'] * 10 ) );
 
 		// encode HTML to entities
 		$text = htmlentities( $text );
@@ -104,6 +104,9 @@ class pastebinFetcher {
 
 		// replace all Unicode glyphs out of range
 		$text = preg_replace( '/[^\00-\255]+/u', '', $text );
+
+		// limit length
+		$text = mb_substr( $text, 0, $this->settings['max_length'] );
 
 		return $text;
 	}

@@ -59,7 +59,7 @@ var Pastes = ( function() {
 		for( var i = 0; i < settings.data.length; i++ ) {
 			var text = settings.data[i]['paste_content'];
 			text = text.replace( /&amp;/gi, '&' );
-			var paste = $( '<article class="paste" data-url="' + encodeURI( settings.data[i]['paste_url'] ) + '"><div class="paste-scroller"><a href="' + encodeURI( settings.data[i]['paste_url'] ) + '" target="_blank">' + text + '</a></div></article>' );
+			var paste = $( '<article class="paste" data-url="' + encodeURI( settings.data[i]['paste_url'] ) + '"><div class="paste-scroller"><span class="paste-text">' + text + '</span></div><a href="' + encodeURI( settings.data[i]['paste_url'] ) + '" class="paste-link" target="_blank">' + encodeURI( settings.data[i]['paste_url'] ) + '</a></article>' );
 
 			paste
 				.appendTo( pastes );
