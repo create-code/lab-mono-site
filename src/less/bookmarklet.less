@@ -78,12 +78,14 @@
 
 	& .button {
 		display: inline-block;
+		vertical-align: top;
 		margin: 0 0.25em 0.5em 0;		
 		padding: 0.5em;
 
 		color: @color--1; 
 		line-height: 1;
 		text-decoration: none;
+		white-space: nowrap;
 
 		background: @color--bg;
 
@@ -92,6 +94,19 @@
 			color: @color--text;
 
 			background: @color--2;
+		}
+	}
+
+	& .button--bookmarklet {	
+		width: 6.5em;
+
+		overflow: hidden;
+
+		&::before {
+			display: inline-block;
+			margin-right: 1em;
+
+			content: attr( title );
 		}
 	}
 }
