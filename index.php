@@ -69,17 +69,26 @@ The sample texts on this website are automatically fetched from <a href="http://
 
 			<div class="bookmarklet-content">
 				<p>
-Test Lab Mono on any website: Simply drag this button to your browser’s bookmark toolbar and hit it hard.
+Test Lab Mono on any* website: Simply drag this button to your browser’s bookmark toolbar and hit it hard:
 				</p>
 
 				<p>
-					<a href="javascript:(function(){s=document.createElement('script');s.type='text/javascript';s.src='https://hatsumatsu.de/lab-mono/bookmarklet/bookmarklet.js';document.body.appendChild(s);})();" class="button" title="Lab Mono">drag me...</a>
+					<a href="javascript:(function(){s=document.createElement('script');s.type='text/javascript';s.src='https://martinwecke.de/lab-mono/bookmarklet/bookmarklet.js';document.body.appendChild(s);})();" class="button button--bookmarklet" title="drag me...">Lab Mono</a>
 					<a href="#_" class="button">okay</a>
+				</p>
+
+				<p>
+					<small>
+* Won't work on SSL-encrypted sites with <a href="https://en.wikipedia.org/wiki/Content_Security_Policy">CSP</a>...
+					</small>
 				</p>
 			</div>
 		</section>		
 
 		<section class="pastes">
 		</section>
+
+		<!-- Piwik Image Tracker-->
+		<img src="https://stats.hatsumatsu.de/piwik.php?idsite=7&rec=1" style="border:0" alt="">		
 	</body>
 </html>
