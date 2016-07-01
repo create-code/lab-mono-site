@@ -43,7 +43,7 @@ class pastebinFetcher {
 		    )
 		);
 		$context  = stream_context_create( $options );
-		$result = file_get_contents( $this->settings['api']['url'], false, $context );
+		$result = @file_get_contents( $this->settings['api']['url'], false, $context );
 		
 		if( $result === false ) { 
 			return false;
@@ -53,7 +53,7 @@ class pastebinFetcher {
 	}
 
 	private function fetchPaste( $id ) {
-		if( $result = file_get_contents( $this->settings['api']['url_raw'] . urlencode( $id ) ) ) {
+		if( $result = @file_get_contents( $this->settings['api']['url_raw'] . urlencode( $id ) ) ) {
 			return $result;
 		} else {
 			return false;
