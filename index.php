@@ -21,10 +21,11 @@
 
 		<!-- TWITTER meta -->
 		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:url" content="http://hatsumatsu.de/lab-mono/">
+		<meta name="twitter:url" content="http://martinwecke.de/lab-mono/">
 		<meta name="twitter:title" content="Lab Mono">
 		<meta name="twitter:description" content="Lab Mono is a monospace typeface designed by Martin Wecke.">
 		<meta name="twitter:image" content="dist/img/facebook.png">		
+		<meta name="twitter:creator" content="@martinwecke">		
 
 		<!-- JS -->
 		<script src="src/js/jquery.min.js"></script>
