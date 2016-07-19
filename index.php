@@ -17,15 +17,15 @@
 		<meta property="og:site_name" content="Lab Mono">
 		<meta property="og:description" content="Lab Mono is a monospace typeface designed by Martin Wecke.">
 		<meta property="og:type" content="website">
-		<meta property="og:image" content="dist/img/facebook.png">	
+		<meta property="og:image" content="dist/img/facebook.png">
 
 		<!-- TWITTER meta -->
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:url" content="http://martinwecke.de/lab-mono/">
 		<meta name="twitter:title" content="Lab Mono">
 		<meta name="twitter:description" content="Lab Mono is a monospace typeface designed by Martin Wecke.">
-		<meta name="twitter:image" content="dist/img/facebook.png">		
-		<meta name="twitter:creator" content="@martinwecke">		
+		<meta name="twitter:image" content="dist/img/facebook.png">
+		<meta name="twitter:creator" content="@martinwecke">
 
 		<!-- JS -->
 		<script src="src/js/modernizr.js"></script>
@@ -52,7 +52,7 @@ _paq.push(['enableLinkTracking']);
 		<noscript>
 			<img src="//stats.hatsumatsu.de/piwik.php?idsite=7" style="border:0;" alt="">
 		</noscript>
-		<!-- / PIWIK -->		
+		<!-- / PIWIK -->
 	</head>
 	<body>
 		<h1>
@@ -61,7 +61,7 @@ _paq.push(['enableLinkTracking']);
 
 		<a href="https://github.com/hatsumatsu/Lab-Mono/archive/master.zip" class="download" title="Download from github.com">
 			&rarr;<span class="reveal"> download</span>
-		</a>		
+		</a>
 
 		<section class="info" id="info">
 			<a href="#info" class="info-toggle" title="Info">
@@ -104,7 +104,7 @@ Test Lab Mono on any* website: Simply drag this button to your browser’s bookm
 					</small>
 				</p>
 			</div>
-		</section>		
+		</section>
 
 		<section class="pastes">
 		</section>

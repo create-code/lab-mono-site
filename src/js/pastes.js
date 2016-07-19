@@ -38,9 +38,9 @@ var Pastes = ( function() {
 		scroll();
 	}
 
-	var onResize = function() {		
+	var onResize = function() {
 		setScroller();
-	}	
+	}
 
 	var loadData = function( callback ) {
 		Debug.log( 'pastes.loadData()' );
@@ -49,7 +49,7 @@ var Pastes = ( function() {
 			settings.data = data;
 
 			$( document ).trigger( 'pastes/data/loaded' );
-		} );		
+		} );
 	}
 
 	var build = function() {
@@ -65,12 +65,12 @@ var Pastes = ( function() {
 				.appendTo( pastes );
 		}
 
-		$( document ).trigger( 'pastes/built' );		
+		$( document ).trigger( 'pastes/built' );
 	}
 
 	var setScroller = function() {
 		Debug.log( 'pastes.setScroller()' );
-		
+
 		settings.isScrolling = true;
 		settings.scrollers = [];
 
@@ -98,7 +98,7 @@ var Pastes = ( function() {
 		if( settings.isScrolling ) {
 			for( var i = 0; i < settings.scrollers.length; i++ ) {
 				settings.scrollers[i].scrollLeft = ( settings.scrollers[i].scrollLeft < settings.scrollers[i].scrollWidth - viewport.getWidth() ) ? settings.scrollers[i].element.scrollLeft() + settings.scrollers[i].scrollStep : 0;
-				settings.scrollers[i].element.scrollLeft( settings.scrollers[i].scrollLeft );			
+				settings.scrollers[i].element.scrollLeft( settings.scrollers[i].scrollLeft );
 			}
 		}
 	}

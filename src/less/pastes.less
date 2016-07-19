@@ -23,11 +23,11 @@
 		color: @color--bg;
 
 		background: @color--text;
-	}	
+	}
 }
 
 .paste-scroller {
-	position: absolute; 
+	position: absolute;
 	left: 0;
 	right: 0;
 	top: 0;
@@ -37,11 +37,11 @@
 	margin: 0 0 -1rem 0;
 	padding: 0 0 1rem 0;
 
-	white-space: nowrap;	
+	white-space: nowrap;
 
 	overflow-x: auto;
 	overflow-y: hidden;
-	-webkit-overflow-scrolling: touch;	
+	-webkit-overflow-scrolling: touch;
 
 	transform: translateZ( 0 );
 }
@@ -50,7 +50,7 @@
 .paste-text  {
 	box-sizing: border-box;
 	display: block;
-	height: ( 100vh / 8 );		
+	height: ( 100vh / 8 );
 	padding: 0.5em 0.75em;
 
 	line-height: 1;
@@ -64,7 +64,7 @@
 
 .paste-link {
 	position: fixed;
-	
+
 	left: 0;
 	top: 0;
 	z-index: 100;
@@ -89,5 +89,5 @@
 
 	.paste:hover & {
 		visibility: visible;
-	}	
+	}
 }

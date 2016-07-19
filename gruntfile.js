@@ -1,7 +1,7 @@
 module.exports = function( grunt ) {
 
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
-	
+
 	// destination path for deployment
 	// overwrite in hidden .deployment file
 	var dest = 'path/for/deployment';
@@ -44,9 +44,9 @@ module.exports = function( grunt ) {
 				],
 				'files' : {
 					'src': [
-						'src/js/**/*.js', 
-						'src/less/**/*.less', 
-						'!node_modules/**/*', 
+						'src/js/**/*.js',
+						'src/less/**/*.less',
+						'!node_modules/**/*',
 						'!src/js/**/*.min.js'
 					]
 				}
@@ -60,10 +60,10 @@ module.exports = function( grunt ) {
 			main: {
 				files: {
 					'dist/js/app.min.js': [
-						'src/js/modernizr.js', 
-						'src/js/jquery.min.js', 
-						'src/js/debug.js', 
-						'src/js/viewport.js', 
+						'src/js/modernizr.js',
+						'src/js/jquery.min.js',
+						'src/js/debug.js',
+						'src/js/viewport.js',
 						'src/js/preloader.js'
 					]
 				}
@@ -74,8 +74,8 @@ module.exports = function( grunt ) {
 			production: {
 				files: [
 					{
-						expand: true, 
-						src: ['src/**/*', 'dist/**/*', '*.php', 'pastebin_dev_key', '!.*'], 
+						expand: true,
+						src: ['src/**/*', 'dist/**/*', '*.php', 'pastebin_dev_key', '!.*'],
 						dest: dest + '/'
 					},
 		    	],
@@ -90,7 +90,7 @@ module.exports = function( grunt ) {
 			js: {
 				files: ['src/js/**/*.js','!js/**/*.min.js', '!pastebin_dev_key', '*.sublime-*'],
 				tasks: ['buildjs']
-			} 
+			}
 		}
 
 	} );
@@ -101,7 +101,7 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'buildmodernizr', ['modernizr'] );
 	grunt.registerTask( 'buildjs',  ['uglify'] );
 
-	grunt.registerTask( 'deploy_production', ['copy:production'] );	
+	grunt.registerTask( 'deploy_production', ['copy:production'] );
 
 	grunt.registerTask( 'build',  ['buildcss', 'buildmodernizr', 'buildjs'] );
 };

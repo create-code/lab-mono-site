@@ -78,16 +78,16 @@ var Preloader = ( function() {
 		clearInterval( settings.interval );
 
 		$( 'html' )
-			.removeClass( 'visible--preloader' );		
+			.removeClass( 'visible--preloader' );
 
-		$( document ).trigger( 'preloader/stop' );		
+		$( document ).trigger( 'preloader/stop' );
 	}
 
 	var step = function() {
 		Debug.log( 'preloader.step()' );
 
 		settings.charCode = ( settings.charCode < settings.charCodeMax - 1 ) ? ( settings.charCode + 1 ) : settings.charCodeMin;
-		
+
 		Debug.log( settings.charCode );
 
 		settings.element
@@ -95,7 +95,7 @@ var Preloader = ( function() {
 			.toggleClass( 'inverted' );
 
 		$( document ).trigger( 'preloader/step' );
-	}	
+	}
 
 	return {
 		init: function() { init(); }
