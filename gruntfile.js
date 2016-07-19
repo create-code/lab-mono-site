@@ -60,6 +60,7 @@ module.exports = function( grunt ) {
 			main: {
 				files: {
 					'dist/js/app.min.js': [
+						'src/js/modernizr.js', 
 						'src/js/jquery.min.js', 
 						'src/js/debug.js', 
 						'src/js/viewport.js', 

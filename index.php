@@ -28,6 +28,7 @@
 		<meta name="twitter:creator" content="@martinwecke">		
 
 		<!-- JS -->
+		<script src="src/js/modernizr.js"></script>
 		<script src="src/js/jquery.min.js"></script>
 		<script src="src/js/debug.js"></script>
 		<script src="src/js/viewport.js"></script>
