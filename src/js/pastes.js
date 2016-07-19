@@ -6,7 +6,7 @@ var Pastes = ( function() {
 			scroller:  	'.paste-scroller'
 		},
 		scrollers: [],
-		scrollStepMin: 0.5,
+		scrollStepMin: 1,
 		scrollStepMax: 2,
 		isScrolling: false
 	}
@@ -34,7 +34,7 @@ var Pastes = ( function() {
 			} );
 	}
 
-	var onLoop = function() {		
+	var onLoop = function() {
 		scroll();
 	}
 
@@ -69,11 +69,14 @@ var Pastes = ( function() {
 	}
 
 	var setScroller = function() {
+		Debug.log( 'pastes.setScroller()' );
+		
 		settings.isScrolling = true;
 		settings.scrollers = [];
 
 		var $scrollers = $( settings.selector.scroller );
 
+		var i = 0;
 		$scrollers.each( function() {
 			var $scroller = $( this );
 			var scroller = {};
@@ -81,9 +84,11 @@ var Pastes = ( function() {
 			scroller.element = $scroller;
 			scroller.scrollWidth = $scroller[0].scrollWidth;
 			scroller.scrollLeft = 0;
-			scroller.scrollStep = settings.scrollStepMin + ( settings.scrollStepMin + ( ( settings.scrollStepMax - settings.scrollStepMin ) * Math.random() ) );
+			scroller.scrollStep = ( i % 2 === 0 ) ? settings.scrollStepMin : settings.scrollStepMax;
 
 			settings.scrollers.push( scroller );
+
+			i++;
 		} );
 
 		Debug.log( settings );
