@@ -1,6 +1,8 @@
 html,
 body {
   margin: 0;
+  height: 100vh;
+  overflow: hidden;
   background: #fff;
 }
 html {
@@ -12,7 +14,7 @@ html {
   color: #111;
 }
 h1 {
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   z-index: 400;
@@ -26,16 +28,16 @@ h1 {
   color: #111;
   text-align: center;
   color: #fff;
-  background: #9EFF08;
+  background: #5C14DD;
 }
 h1:hover,
 h1:focus {
   width: auto;
   color: #111;
-  background: #5C14DD;
+  background: #9EFF08;
 }
 .preloader {
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;
@@ -64,7 +66,7 @@ h1:focus {
   opacity: 1;
 }
 .pastes {
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;
@@ -96,10 +98,13 @@ h1:focus {
   bottom: 0;
   height: 12.5vh;
   margin: 0 0 -1rem 0;
-  padding: 0 0 1rem;
+  padding: 0 0 1rem 0;
   white-space: nowrap;
   overflow-x: auto;
-  overflow-y: visible;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 .paste-text {
   box-sizing: border-box;
@@ -109,6 +114,9 @@ h1:focus {
   line-height: 1;
   color: inherit;
   text-decoration: none;
+}
+.no-touchevents .paste-text {
+  text-indent: calc( 5vh + 0.25em );
 }
 .paste-link {
   position: fixed;
@@ -123,7 +131,7 @@ h1:focus {
   white-space: nowrap;
   color: #fff;
   text-decoration: none;
-  background: #9EFF08;
+  background: #5C14DD;
   visibility: hidden;
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
@@ -134,21 +142,21 @@ h1:focus {
   visibility: visible;
 }
 .download {
-  position: fixed;
+  position: absolute;
   right: 0;
-  bottom: 0;
+  top: 0;
   z-index: 400;
   box-sizing: border-box;
   width: 12.5vh;
   height: 12.5vh;
-  margin: 0 0 12.5vh 0;
+  margin: 75vh 0 0 0;
   padding: 0.5em 0.5em;
   font-size: 6.75vh;
   line-height: 1;
   text-decoration: none;
   text-align: center;
   color: #fff;
-  background: #9EFF08;
+  background: #5C14DD;
 }
 .download > .reveal {
   display: none;
@@ -157,7 +165,7 @@ h1:focus {
 .download:focus {
   width: auto;
   color: #111;
-  background: #5C14DD;
+  background: #9EFF08;
 }
 .download:hover > .reveal,
 .download:focus > .reveal {
@@ -171,7 +179,7 @@ h1:focus {
   padding-bottom: 0.75em;
 }
 .info-toggle {
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   z-index: 400;
@@ -185,7 +193,7 @@ h1:focus {
   text-align: center;
   text-decoration: none;
   color: #fff;
-  background: #9EFF08;
+  background: #5C14DD;
 }
 .info-toggle > .reveal {
   display: none;
@@ -194,14 +202,14 @@ h1:focus {
 .info-toggle:focus {
   width: auto;
   color: #111;
-  background: #5C14DD;
+  background: #9EFF08;
 }
 .info-toggle:hover > .reveal,
 .info-toggle:focus > .reveal {
   display: inline;
 }
 .info-content {
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;
@@ -211,9 +219,10 @@ h1:focus {
   font-size: 6.75vh;
   line-height: 1.5;
   color: #fff;
-  background: #9EFF08;
+  background: #5C14DD;
   overflow-x: hidden;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   opacity: 0;
 }
 .info:target .info-content {
@@ -234,7 +243,7 @@ h1:focus {
   display: inline-block;
   margin: 0 0.25em 0.5em 0;
   padding: 0.5em;
-  color: #9EFF08;
+  color: #5C14DD;
   line-height: 1;
   text-decoration: none;
   background: #fff;
@@ -242,7 +251,7 @@ h1:focus {
 .info-content .button:hover,
 .info-content .button:focus {
   color: #111;
-  background: #5C14DD;
+  background: #9EFF08;
 }
 @media screen and (max-width: 48rem) {
   .info-content {
@@ -250,7 +259,7 @@ h1:focus {
   }
 }
 .bookmarklet-toggle {
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   z-index: 400;
@@ -264,7 +273,7 @@ h1:focus {
   text-align: center;
   text-decoration: none;
   color: #fff;
-  background: #9EFF08;
+  background: #5C14DD;
 }
 .bookmarklet-toggle > .reveal {
   display: none;
@@ -273,14 +282,14 @@ h1:focus {
 .bookmarklet-toggle:focus {
   width: auto;
   color: #111;
-  background: #5C14DD;
+  background: #9EFF08;
 }
 .bookmarklet-toggle:hover > .reveal,
 .bookmarklet-toggle:focus > .reveal {
   display: inline;
 }
 .bookmarklet-content {
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;
@@ -290,9 +299,10 @@ h1:focus {
   font-size: 6.75vh;
   line-height: 1.5;
   color: #fff;
-  background: #9EFF08;
+  background: #5C14DD;
   overflow-x: hidden;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   opacity: 0;
 }
 .bookmarklet:target .bookmarklet-content {
@@ -311,17 +321,28 @@ h1:focus {
 }
 .bookmarklet-content .button {
   display: inline-block;
+  vertical-align: top;
   margin: 0 0.25em 0.5em 0;
   padding: 0.5em;
-  color: #9EFF08;
+  color: #5C14DD;
   line-height: 1;
   text-decoration: none;
+  white-space: nowrap;
   background: #fff;
 }
 .bookmarklet-content .button:hover,
 .bookmarklet-content .button:focus {
   color: #111;
-  background: #5C14DD;
+  background: #9EFF08;
+}
+.bookmarklet-content .button--bookmarklet {
+  width: 6.5em;
+  overflow: hidden;
+}
+.bookmarklet-content .button--bookmarklet::before {
+  display: inline-block;
+  margin-right: 1em;
+  content: attr(title);
 }
 @media screen and (max-width: 48rem) {
   .bookmarklet-content {

@@ -21,7 +21,9 @@ var viewport = ( function() {
         isScrolledToFirstScreen: false,
         isScrolledToLastScreen: false,
         scrollToOffset: 0,
-        scrollToSpeed: 2                
+        scrollToSpeed: 2,
+
+        isSafari: false                
     };
 
     var init = function() {        
@@ -33,6 +35,12 @@ var viewport = ( function() {
 
         onScroll();
         onLoop();
+
+        settings.isSafari = /constructor/i.test( window.HTMLElement );
+        if( settings.isSafari ) {
+            $( 'html' )
+                .addClass( 'is--safari' );
+        }
     }
 
     var bindEventHandlers = function() {
@@ -257,7 +265,11 @@ var viewport = ( function() {
 
     var getScrollFactor = function() {
         return settings.scrollFactor;
-    }                        
+    }                 
+
+    var isSafari = function() {
+        return settings.isSafari;
+    }       
 
     return {
         init:               function() { init(); },
@@ -265,7 +277,8 @@ var viewport = ( function() {
         getWidth:           function() { return getWidth() },
         getHeight:          function() { return getHeight() },
         getScrollTop:       function() { return getScrollTop() },
-        getScrollFactor:    function() { return getScrollFactor() }
+        getScrollFactor:    function() { return getScrollFactor() },
+        isSafari:           function() { return isSafari() }
     }
 
 } )();

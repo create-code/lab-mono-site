@@ -1,5 +1,5 @@
 .pastes {
-	position: fixed;
+	position: absolute;
 	left: 0;
 	right: 0;
 	top: 0;
@@ -35,12 +35,15 @@
 
 	height: ( 100vh / 8 );
 	margin: 0 0 -1rem 0;
-	padding: 0 0 1rem;
+	padding: 0 0 1rem 0;
 
 	white-space: nowrap;	
 
 	overflow-x: auto;
 	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;	
+
+	transform: translateZ( 0 );
 }
 
 
@@ -53,6 +56,10 @@
 	line-height: 1;
 	color: inherit;
 	text-decoration: none;
+
+	.no-touchevents & {
+		text-indent: ~'calc( 5vh + 0.25em )';
+	}
 }
 
 .paste-link {
