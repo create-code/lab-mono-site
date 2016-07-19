@@ -34,6 +34,25 @@
 		<script src="src/js/viewport.js"></script>
 		<script src="src/js/preloader.js"></script>
 		<script src="src/js/pastes.js"></script>
+
+		<!-- PIWIK -->
+		<script type="text/javascript">
+var _paq = _paq || [];
+_paq.push(['setDomains', ['*.martinwecke.de','*.2016.martinwecke.de']]);
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+( function() {
+	var u='//stats.hatsumatsu.de/';
+	_paq.push(['setTrackerUrl', u+'piwik.php']);
+	_paq.push(['setSiteId', 7]);
+	var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+} )();
+		</script>
+		<noscript>
+			<img src="//stats.hatsumatsu.de/piwik.php?idsite=7" style="border:0;" alt="">
+		</noscript>
+		<!-- / PIWIK -->		
 	</head>
 	<body>
 		<h1>
@@ -89,8 +108,5 @@ Test Lab Mono on any* website: Simply drag this button to your browser’s bookm
 
 		<section class="pastes">
 		</section>
-
-		<!-- Piwik Image Tracker-->
-		<img src="https://stats.hatsumatsu.de/piwik.php?idsite=7&rec=1" style="border:0" alt="">		
 	</body>
 </html>
