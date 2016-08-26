@@ -17,14 +17,14 @@
 		<meta property="og:site_name" content="Lab Mono">
 		<meta property="og:description" content="Lab Mono is a monospace typeface designed by Martin Wecke.">
 		<meta property="og:type" content="website">
-		<meta property="og:image" content="dist/img/facebook.png">
+		<meta property="og:image" content="http://martinwecke.de/lab-mono/dist/img/facebook.png">
 
 		<!-- TWITTER meta -->
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:url" content="http://martinwecke.de/lab-mono/">
 		<meta name="twitter:title" content="Lab Mono">
 		<meta name="twitter:description" content="Lab Mono is a monospace typeface designed by Martin Wecke.">
-		<meta name="twitter:image" content="dist/img/facebook.png">
+		<meta name="twitter:image" content="http://martinwecke.de/lab-mono/dist/img/facebook.png">
 		<meta name="twitter:creator" content="@martinwecke">
 
 		<!-- JS -->
