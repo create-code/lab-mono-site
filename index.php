@@ -10,7 +10,7 @@
 		<meta name="theme-color" content="#5C14DD">
 
 		<!-- CSS -->
-		<link rel="stylesheet" type="text/css" href="dist/font/lab-mono.css">
+		<link rel="stylesheet" type="text/css" href="dist/font/lab-mono.css?v0.16">
 		<link rel="stylesheet" type="text/css" href="dist/css/style.css">
 
 		<!-- FACEBOOK meta -->
