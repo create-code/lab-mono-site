@@ -60,7 +60,7 @@ _paq.push(['enableLinkTracking']);
 		</h1>
 
 		<a href="https://github.com/hatsumatsu/Lab-Mono/archive/master.zip" class="download" title="Download from github.com">
-			&rarr;<span class="reveal"> download</span>
+			&darr;<span class="reveal"> download</span>
 		</a>
 
 		<section class="info" id="info">
