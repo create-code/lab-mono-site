@@ -85,7 +85,7 @@ The sample texts on this website are automatically fetched from <a href="http://
 
 		<section class="bookmarklet" id="bookmarklet">
 			<a href="#bookmarklet" class="bookmarklet-toggle" title="Bookmarklet">
-				b<span class="reveal">ookmarklet</span>
+				✔ <span class="reveal">bookmarklet</span>
 			</a>
 
 			<div class="bookmarklet-content">
